@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+header a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+/* Calendário semanal */
+.semana {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.dia {
+    flex: 1 1 150px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+}
+.dia h3 { margin: 0 0 8px; font-size: 1em; }
+.dia small { display: block; color: #666; font-weight: normal; }
+.slot { display: block; padding: 4px 0; cursor: pointer; }
+.slot span { color: #666; font-size: 0.85em; }
+.ok { color: #2e7d32; font-weight: bold; }
+.erro { color: #c62828; font-weight: bold; }

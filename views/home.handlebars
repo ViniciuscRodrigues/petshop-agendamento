@@ -1,0 +1,29 @@
+<h2>Horários Disponíveis para Agendamento</h2>
+
+{{#if dias.length}}
+<form action="/agendar" method="POST">
+    <div class="semana">
+        {{#each dias}}
+        <div class="dia">
+            <h3>{{this.nome}} <small>{{this.data}}</small></h3>
+            {{#each this.slots}}
+            <label class="slot">
+                <input type="radio" name="slot" value="{{this.valor}}" required>
+                {{this.horario}} <span>(vagas: {{this.vagas}})</span>
+            </label>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+
+    <label for="nome">Nome do Cliente:</label>
+    <input type="text" name="nome" id="nome" required>
+
+    <label for="cpf">CPF do Cliente:</label>
+    <input type="text" name="cpf" id="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00">
+
+    <button type="submit">Confirmar Agendamento</button>
+</form>
+{{else}}
+<p>Não há horários disponíveis nos próximos 7 dias.</p>
+{{/if}}

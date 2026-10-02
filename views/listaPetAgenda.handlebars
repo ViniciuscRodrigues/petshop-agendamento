@@ -1,0 +1,21 @@
+<h2>Agenda de Atendimentos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Cliente</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each agendamentos}}
+        <tr>
+            <td>{{this.dataAtendimento}}</td>
+            <td>{{this.horario}}</td>
+            <td>{{this.clienteNome}}</td>
+            <td>{{this.clienteCPF}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
